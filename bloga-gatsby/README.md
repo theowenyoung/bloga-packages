@@ -19,7 +19,7 @@ $ npm install -g bloga-gatsby
 $ bloga-gatsby COMMAND
 running command...
 $ bloga-gatsby (-v|--version|version)
-bloga-gatsby/0.0.1 darwin-x64 node-v12.18.0
+bloga-gatsby/0.0.9 darwin-x64 node-v12.18.0
 $ bloga-gatsby --help [COMMAND]
 USAGE
   $ bloga-gatsby COMMAND
@@ -48,7 +48,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.1/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.9/src/commands/hello.js)_
 
 ## `bloga-gatsby help [COMMAND]`
 
@@ -76,12 +76,13 @@ USAGE
   $ bloga-gatsby init
 
 OPTIONS
-  -f, --file=file  remote file url
+  -f, --file=file                remote file url
+  -p, --path-prefix=path-prefix  path prefix
 
 DESCRIPTION
   ...
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.1/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.9/src/commands/init.js)_
 <!-- commandsstop -->

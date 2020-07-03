@@ -1,7 +1,7 @@
 {
   "name": "bloga-gatsby",
   "description": "Bloga gatsby pre build tools",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "author": "Owen Young @theowenyoung",
   "bin": {
     "bloga-gatsby": "./bin/run"
@@ -11,10 +11,11 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
-    "bloga-core": "^0.0.2",
+    "bloga-core": "^0.0.4",
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "map-obj": "^4.1.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
