@@ -8,7 +8,7 @@
   },
   "bugs": "https://github.com/theowenyoung/bloga-gatsby/issues",
   "dependencies": {
-    "@oclif/command": "^1",
+    "@oclif/command": "^1.7.0",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
     "bloga-core": "^0.0.4",
