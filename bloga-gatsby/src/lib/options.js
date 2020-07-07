@@ -113,6 +113,9 @@ const getGatsbyOptions = async ({pwd} = {}) => {
   } catch (error) {
     throw error
   }
+  if (!blogaOptions) {
+    blogaOptions = {}
+  }
 
   const {configModule: config} = await getConfigFile(
     pwd,
