@@ -16,12 +16,15 @@ class Config {
   _initBlogaSiteConfig() {
     try {
       const blogaSiteConfig = require(path.resolve(BLOGA_SITE_CONFIG_PATH))
+
       this.blogaSiteConfig = blogaSiteConfig
       this.blogaSiteConfig.sources = this.blogaSiteConfig.sources || []
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log('Can not detect bloga site config, have you init bloga site config first?')
-      this.blogaSiteConfig = {}
+      this.blogaSiteConfig = {
+        sources: [],
+      }
     }
   }
 
