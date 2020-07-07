@@ -19,7 +19,7 @@ $ npm install -g bloga-gatsby
 $ bloga-gatsby COMMAND
 running command...
 $ bloga-gatsby (-v|--version|version)
-bloga-gatsby/0.0.9 darwin-x64 node-v12.18.0
+bloga-gatsby/0.0.10 darwin-x64 node-v12.18.0
 $ bloga-gatsby --help [COMMAND]
 USAGE
   $ bloga-gatsby COMMAND
@@ -31,6 +31,7 @@ USAGE
 * [`bloga-gatsby hello`](#bloga-gatsby-hello)
 * [`bloga-gatsby help [COMMAND]`](#bloga-gatsby-help-command)
 * [`bloga-gatsby init`](#bloga-gatsby-init)
+* [`bloga-gatsby options`](#bloga-gatsby-options)
 
 ## `bloga-gatsby hello`
 
@@ -48,7 +49,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.9/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.10/src/commands/hello.js)_
 
 ## `bloga-gatsby help [COMMAND]`
 
@@ -84,5 +85,20 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.9/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.10/src/commands/init.js)_
+
+## `bloga-gatsby options`
+
+Generate bloga options
+
+```
+USAGE
+  $ bloga-gatsby options
+
+OPTIONS
+  -o, --override   is override bloga-options.yaml?
+  -p, --path=path  [default: bloga-options.yaml] file path
+```
+
+_See code: [src/commands/options.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.10/src/commands/options.js)_
 <!-- commandsstop -->
