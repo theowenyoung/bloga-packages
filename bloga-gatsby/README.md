@@ -19,7 +19,7 @@ $ npm install -g bloga-gatsby
 $ bloga-gatsby COMMAND
 running command...
 $ bloga-gatsby (-v|--version|version)
-bloga-gatsby/0.0.11 darwin-x64 node-v12.18.0
+bloga-gatsby/0.0.12 darwin-x64 node-v12.18.0
 $ bloga-gatsby --help [COMMAND]
 USAGE
   $ bloga-gatsby COMMAND
@@ -49,7 +49,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.11/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.12/src/commands/hello.js)_
 
 ## `bloga-gatsby help [COMMAND]`
 
@@ -85,7 +85,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.11/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.12/src/commands/init.js)_
 
 ## `bloga-gatsby options`
 
@@ -101,5 +101,5 @@ OPTIONS
   -p, --path=path      file path
 ```
 
-_See code: [src/commands/options.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.11/src/commands/options.js)_
+_See code: [src/commands/options.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.12/src/commands/options.js)_
 <!-- commandsstop -->

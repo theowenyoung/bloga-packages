@@ -4,6 +4,7 @@ const path = require('path')
 const {getConfigFile} = require('gatsby/dist/bootstrap/get-config-file')
 const yaml = require('js-yaml')
 const fs = require('fs-extra')
+const debug = require('debug')('bloga-gatsby:options')
 const getSiteMetadataOptions = config => {
   const option = {
     type: 'object',
@@ -97,6 +98,7 @@ const getGatsbyOptions = async ({pwd} = {}) => {
   if (!pwd) {
     pwd = process.cwd()
   }
+  debug('pwd: %s', pwd)
   const pkg = require(path.resolve(pwd, 'package.json'))
   let blogaOptions = {}
   let optionsContent = ''
@@ -170,6 +172,7 @@ const getGatsbyOptions = async ({pwd} = {}) => {
 }
 const loadGatsbyOptions = async ({pwd, path: filePath, format = 'yaml'} = {}) => {
   const options =  await getGatsbyOptions({pwd})
+  debug('pwd: %s, path: %s, format: %s', pwd, filePath, format)
   let output = ''
   if (format === 'json') {
     output = JSON.stringify(options, null, 2)
