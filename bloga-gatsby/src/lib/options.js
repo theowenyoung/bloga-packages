@@ -168,11 +168,23 @@ const getGatsbyOptions = async ({pwd} = {}) => {
   finalOptions.options = finalOptions.options.concat(finalPluginOptions)
   return finalOptions
 }
-const loadGatsbyOptions = async ({pwd, path: filePath} = {}) => {
+const loadGatsbyOptions = async ({pwd, path: filePath, format = 'yaml'} = {}) => {
   const options =  await getGatsbyOptions({pwd})
-  const yamlStr = yaml.safeDump(options)
-  await fs.outputFile(filePath, yamlStr)
-  return yamlStr
+  let output = ''
+  if (format === 'json') {
+    output = JSON.stringify(options, null, 2)
+  } else  {
+    output = yaml.safeDump(options)
+  }
+  if (filePath) {
+    // do nothing
+  } else if (format === 'json') {
+    filePath = 'bloga-options.json'
+  } else {
+    filePath = 'bloga-options.yaml'
+  }
+  await fs.outputFile(filePath, output)
+  return output
 }
 module.exports = {
   getGatsbyOptions,
