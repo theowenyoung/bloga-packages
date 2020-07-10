@@ -66,7 +66,6 @@ const getPluginOptions = function (source, originOptions = {}) {
         client_id: credentials.client_id,
         client_secret: credentials.client_secret,
         connection_id: credentials.connection_id,
-        instagram_id: options.user_id,
       }
     } else {
       plugin.options = {
