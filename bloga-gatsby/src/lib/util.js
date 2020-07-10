@@ -3,6 +3,7 @@ const _ = require('lodash')
 const sourceMap = {
   twitter: '@theowenyoung/gatsby-source-twitter',
   git: '@theowenyoung/gatsby-source-git',
+  instagram: '@theowenyoung/gatsby-source-instagram',
 }
 const getResolveByProvider = function (source) {
   const {provider} = source
@@ -65,6 +66,7 @@ const getPluginOptions = function (source, originOptions = {}) {
         client_id: credentials.client_id,
         client_secret: credentials.client_secret,
         connection_id: credentials.connection_id,
+        instagram_id: options.user_id,
       }
     } else {
       plugin.options = {
