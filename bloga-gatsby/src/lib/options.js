@@ -30,6 +30,7 @@ const getSourcesOptions = (pkg = {}) => {
   const supportSourcePlugins = {
     '@theowenyoung/gatsby-source-twitter': 'twitter',
     '@theowenyoung/gatsby-source-git': 'git',
+    '@theowenyoung/gatsby-source-instagram': 'instagram',
   }
   const dependences = []
   if (pkg.dependencies) {
