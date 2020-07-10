@@ -59,6 +59,13 @@ const getPluginOptions = function (source, originOptions = {}) {
           },
         },
       }
+    } else if (provider === 'instagram') {
+      plugin.options = {
+        ...originOptions,
+        client_id: credentials.client_id,
+        client_secret: credentials.client_secret,
+        connection_id: credentials.connection_id,
+      }
     } else {
       plugin.options = {
         ...source.options,
