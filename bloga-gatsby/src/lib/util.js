@@ -89,3 +89,18 @@ const getTemplateValue = function (text, ctx) {
 exports.getResolveByProvider = getResolveByProvider
 exports.getPluginOptions = getPluginOptions
 exports.getTemplateValue = getTemplateValue
+
+function getType(obj, typ) {
+  typ = ((typ && typ.toLowerCase()) || false)
+
+  var objTyp = Object
+  .prototype
+  .toString
+  .call(obj)
+  .replace('[object ', '')
+  .replace(']', '')
+  .toLowerCase()
+
+  return (typ) ? objTyp === typ : objTyp
+}
+exports.getType = getType

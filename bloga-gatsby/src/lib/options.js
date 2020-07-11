@@ -4,25 +4,53 @@ const path = require('path')
 const {getConfigFile} = require('gatsby/dist/bootstrap/get-config-file')
 const yaml = require('js-yaml')
 const fs = require('fs-extra')
+const {getType} = require('./util')
 const debug = require('debug')('bloga-gatsby:options')
+const getOptionsFromObj = obj => {
+  const objType = getType(obj)
+  if (objType === 'object') {
+    const options = []
+    const keys = Object.keys(obj)
+    keys.forEach(key => {
+      const value = obj[key]
+      const valueType = getType(value)
+      if (valueType === 'object') {
+        options.push({
+          type: 'object',
+          name: key,
+          label: Case.title(key),
+          options: getOptionsFromObj(value),
+        })
+      } else if (valueType === 'array') {
+        // only support all string type
+        const isAllString = value.every(item => getType(item) === 'string')
+        if (isAllString) {
+          options.push({
+            type: 'array',
+            name: key,
+            label: Case.title(key),
+            default: value,
+          })
+        }
+      } else if (valueType === 'string' || valueType === 'number' || valueType === 'boolean') {
+        options.push({
+          type: valueType,
+          default: value,
+          name: key,
+          label: Case.title(key),
+        })
+      }
+    })
+    return options
+  }
+  return []
+}
 const getSiteMetadataOptions = config => {
   const option = {
     type: 'object',
     name: 'siteMetadata',
     label: ' Site Metadata',
-    options: [],
-  }
-  if (config.siteMetadata) {
-    const keys = Object.keys(config.siteMetadata)
-    keys.forEach(key => {
-      const value = config.siteMetadata[key]
-      option.options.push({
-        type: typeof value,
-        default: value,
-        name: key,
-        label: Case.title(key),
-      })
-    })
+    options: getOptionsFromObj(config.siteMetadata),
   }
   return option
 }

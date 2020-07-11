@@ -9,6 +9,8 @@ class Config {
   constructor(gatsbyConfigPath, options = {}) {
     this.originGatsbyConfig = require(path.resolve(gatsbyConfigPath))
     this.options = options
+    // TODO logger
+    this.logLevel = options.logLevel || 1
     this.gatsbyConfig = this.originGatsbyConfig
     this._init()
   }
