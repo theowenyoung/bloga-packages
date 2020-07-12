@@ -1,7 +1,7 @@
 {
   "name": "bloga-gatsby",
   "description": "Bloga gatsby pre build tools",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "author": "Owen Young @theowenyoung",
   "bin": {
     "bloga-gatsby": "./bin/run"
@@ -15,11 +15,14 @@
     "case": "^1.6.3",
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
+    "download-git-repo": "^3.0.2",
     "fs-extra": "^9.0.1",
     "gatsby": "^2.23.21",
+    "git-clone": "^0.1.0",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.15",
-    "map-obj": "^4.1.0"
+    "map-obj": "^4.1.0",
+    "tmp": "^0.2.1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",

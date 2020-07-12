@@ -19,7 +19,7 @@ $ npm install -g bloga-gatsby
 $ bloga-gatsby COMMAND
 running command...
 $ bloga-gatsby (-v|--version|version)
-bloga-gatsby/0.0.21 darwin-x64 node-v12.18.2
+bloga-gatsby/0.0.22 darwin-x64 node-v12.18.2
 $ bloga-gatsby --help [COMMAND]
 USAGE
   $ bloga-gatsby COMMAND
@@ -32,6 +32,7 @@ USAGE
 * [`bloga-gatsby help [COMMAND]`](#bloga-gatsby-help-command)
 * [`bloga-gatsby init`](#bloga-gatsby-init)
 * [`bloga-gatsby options`](#bloga-gatsby-options)
+* [`bloga-gatsby workflows`](#bloga-gatsby-workflows)
 
 ## `bloga-gatsby hello`
 
@@ -49,7 +50,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.21/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.22/src/commands/hello.js)_
 
 ## `bloga-gatsby help [COMMAND]`
 
@@ -85,7 +86,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.21/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.22/src/commands/init.js)_
 
 ## `bloga-gatsby options`
 
@@ -101,5 +102,19 @@ OPTIONS
   -p, --path=path      file path
 ```
 
-_See code: [src/commands/options.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.21/src/commands/options.js)_
+_See code: [src/commands/options.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.22/src/commands/options.js)_
+
+## `bloga-gatsby workflows`
+
+Generate bloga github workflows
+
+```
+USAGE
+  $ bloga-gatsby workflows
+
+OPTIONS
+  -t, --template=template  [default: https://github.com/theowenyoung/gatsby-starter-blog] workflow template repo
+```
+
+_See code: [src/commands/workflows.js](https://github.com/theowenyoung/bloga-gatsby/blob/v0.0.22/src/commands/workflows.js)_
 <!-- commandsstop -->
